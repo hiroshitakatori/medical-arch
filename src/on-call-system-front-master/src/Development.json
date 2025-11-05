@@ -1,0 +1,36 @@
+{
+    "register": ["post" , "/admin/register"],
+    "login": ["post" , "/admin/login"],
+    "otpverification": ["post" , "/admin/otp/verify/signup"],
+    "logout": ["patch" , "/admin/logout"],
+    "forgetpassword":["post","/admin/otp/get"],
+    "otpverificationpassword":["post","/admin/otp/verify"],
+    "resetpassword":["post","/admin/forgotPassword"],
+    
+     
+    "stafflist":["get","/admin/getStaff"],
+    "addstaff":["post","/admin/addStaff"],
+    "uploadfile":["post","/uploadImage/contract"],
+    "editstaff":["post", "/admin/updateStaff"],
+
+    "addfacility":["post", "/admin/addFacility"],
+    "editfacility":["post", "/admin/updateFacility"],
+    "getplans" : ["get","/admin/plans"],
+
+    "getprofile" :["get", "/admin/getProfile"],
+    "cancelFacility" :["post", "/admin/cancelFacilityContract"],
+    "GetallFacility" :["get", "/admin/allfacilityList"],
+
+    "addreport" :["post", "/admin/addReport"],
+    "editreport" :["post", "/admin/updateReport"],  
+
+    "getshift" :["get", "/admin/getShift"],
+    "addShift" :["post", "/admin/addStaffShift2"],
+    "updateShift" :["post", "/admin/addStaffShift2"],
+    "getstaffShift" :["post", "/admin/getstaffShift"],
+    "staffshift":["get", "/admin/staffShift"],
+    "addSymptom" :["post", "/admin/symptomsAdd"],
+
+
+    "deletemisscall" :["post", "/admin/deleteMissCall"]
+}

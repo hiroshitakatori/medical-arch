@@ -1,0 +1,699 @@
+[
+    {
+        "fever": {
+            "radioButton": [
+                { "id":"1","type":"radio","name":"Shoulder breathing","options":["Yes","No"]},
+                {"id":"2","type":"radio","name":"cyanosis","options":["Yes","No"]},
+                {"id":"3","type":"radio","name":"Chills","options":["Yes","No"]},
+                {"id":"4","type":"radio","name":"phlegm entanglement","options":["Yes","No"]},
+                {"id":"5","type":"radio","name":"pain","options":["Yes","No"]},
+                {"id":"6","type":"radio","name":"decreased level of consciousness","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Deterioration of respiratory condition",
+                "Decreased level of consciousness",
+                "Blood pressure is falling.",
+                "Shivering persists despite heating"
+            ],
+            "response": [
+                "Medication of antipyretic (not allowed if blood pressure is below 100, and basically prohibited from PEG)",
+                "*Drugs prescribed for other than fever are not allowed. ",
+                "1) Consult a physician in case of chills, respiratory status, decreased level of consciousness, or a temperature of 39°C or higher.",
+                "2) Consult a physician if there are no instructions regarding volume, number of doses, or intervals between doses.",
+                "If the temperature is 38°C or higher: 3-point cooling (head, both groins, or one axilla, groin)",
+                "If possible, encourage drinking water to prevent aspiration.",
+                "Adjust room temperature and hanging items.",
+                "Check vital signs after 2 hours.",
+                "If chills are present, warm the patient and call ・again in 30 minutes.",
+                "If chills persist, consider sepsis.",
+                "If fever persists at the time of recall but no other symptoms are present, retest is not necessary."
+            ]
+        }
+    },
+    {
+        "vomiting": {
+           
+            "radioButton": [
+
+                {"id":"7","type":"input","name":"Volume"},
+                {"id":"8","type":"input","name":"Characteristics"},
+                {"id":"9","type":"radio","name":"Smell of feces","options":["Yes","No"]},
+                {"id":"10","type":"radio","name":"Blood in stool","options":["Yes","No"]},
+                {"id":"11","type":"input","name":"Frequency"},
+                {"id":"12","type":"radio","name":"Persistent nausea","options":["Yes","No"]},
+                {"id":"13","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"14","type":"radio","name":"Abdominal pain","options":["Yes","No"]},
+                {"id":"15","type":"radio","name":"Headache","options":["Yes","No"]},
+                {"id":"16","type":"radio","name":"Chest pain","options":["Yes","No"]},
+                {"id":"17","type":"radio","name":"Bowel movements","options":["Yes","No"]},
+                {"id":"18","type":"radio","name":"History of bowel obstruction, cerebral infarction, etc.","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Heavy hematemesis, decreased blood pressure",
+                "Stool odor (check for history)",
+                "decreased level of consciousness."
+            ],
+            "response": [
+                "Bed up to prevent aspiration, and if possible, stay in the side lying position. ",
+                "Vital signs are measured 2 hours later.",
+                "Internal Medication",
+                "1) Explain that if the patient does not eat, he/she should not take any medication as it may contain DM medications.",
+                "2) Do not give additional medications even if the patient vomits immediately after taking the medication."
+            ]
+        }
+    },
+    {
+        "Falls": {
+            "radioButton":[  
+            {"id":"19","type":"input","name":"Situation at the time of discovery"},
+            {"id":"20","type":"radio","name":"Witnesses at the time of the fall","options":["Yes","No"]},
+            {"id":"21","type":"input","name":"Trauma: location"},
+            {"id":"22","type":"radio","name":"Trauma: pain","options":["Yes","No"]},
+            {"id":"23","type":"radio","name":"Trauma: swelling","options":["Yes","No"]},
+            {"id":"24","type":"radio","name":"Bleeding","options":["Yes","No"]},
+            {"id":"25","type":"radio","name":"Head injury","options":["Yes","No"]},
+            {"id":"26","type":"radio","name":"If facial injury, check for retinal detachment, eye movement disorder, and double vision.","options":["Yes","No"]}
+           ],
+           "observation":[],
+            "emergancyTransport": [
+                "Vitals are abnormal with decreased level of consciousness, headache, nausea, or vomiting.",
+                "Suspected retinal detachment"
+            ],
+            "response": [
+                "Check vitals and site of injury at 2 hours.",
+                "(If head injury is present or unknown, note symptoms of decreased level of consciousness, headache, nausea, and vomiting up to 2 hours)",
+                "If there is redness or swelling, advise cooling.",
+                "Immediately after a fall, blood pressure may be temporarily high, so if there are no other symptoms, temporarily monitor the patient."
+            ]
+        }
+    },
+    {
+        "Trauma": {
+          
+            "radioButton": [
+                {"id":"27","type":"input","name":"Bleeding: Pulsatile or minimal (if massive, check for anticoagulants)"},
+                {"id":"28","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"29","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"30","type":"radio","name":"Pale face","options":["Yes","No"]},
+                {"id":"31","type":"radio","name":"Cyanosis","options":["Yes","No"]}
+             ],
+             "observation":[],
+            "emergancyTransport": [
+                "Pulsating hemorrhage",
+                "Bleeding does not subside after 15 minutes plus 10 minutes of pressure hemostasis.",
+                "Decreased level of consciousness",
+                "Cold sweat, pallor, cyanosis"
+            ],
+            "response": [
+                "If bleeding: Apply gauze to stop bleeding for 15 minutes and call again.",
+                "If bleeding does not stop after 15 minutes, apply pressure and tourniquet for another 10 minutes.",
+                "If the bleeding is stopped, a small amount of bleeding or if the bleeding has subsided, follow-up observation.",
+                "If hemostasis is achieved, small amount of bleeding or vigorous bleeding has subsided, follow-up is indicated."
+            ]
+        }
+    },
+    {
+        "Bone fracture": {
+           
+            "radioButton": [
+                {"id":"32","type":"radio","name":"Swelling","options":["Yes","No"]},
+                {"id":"33","type":"radio","name":"Heat sensation","options":["Yes","No"]},
+
+                {"id":"35","type":"radio","name":"Degree of pain","options":["Severe pain even when at rest","No pain when at rest","Other"],"dependentId":"34","dependentValue":"Other"},
+                {"id":"34","type":"input","name":"Degree of pain-Other","isDependent":"1"},
+
+                {"id":"36","type":"radio","name":"Eye movement disorder (double vision) in case of facial injury","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Open fracture",
+                "Suspected fracture and abnormal vitals (hypotension)",
+                "Suspected fracture, severe pain even at rest"
+            ],
+            "response": [
+                "Suspected fracture, but pain is under control as long as she rests.",
+                "→Tell the patient of the possibility of a fracture and ask to be called back in 30 minutes.",
+                "If there is no problem after 30 minutes, take the patient's vitals 2 hours later.",
+                "Advise the patient to eat and defecate on the floor as much as possible.",
+                "If not possible, use a wheelchair to avoid putting load on the affected part."
+            ]
+        }
+    },
+    {
+        "Dyspnea, low SpO2": {
+       
+            "radioButton": [
+                {"id":"37","type":"radio","name":"Shoulder breathing","options":["Yes","No"]},
+                {"id":"38","type":"radio","name":"Wheezing","options":["Yes","No"]},
+                {"id":"39","type":"radio","name":"Cyanosis","options":["Yes","No"]},
+                {"id":"40","type":"radio","name":"Phlegm entanglement","options":["Yes","No"]},
+                {"id":"41","type":"radio","name":"Decreased level of consciousness ","options":["Yes","No"]},
+                {"id":"42","type":"radio","name":"Peripheral coldness","options":["Yes","No"]},
+                {"id":"43","type":"radio","name":"Oxygen administration","options":["Yes","No"]},
+                {"id":"44","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"45","type":"radio","name":"Chest pain","options":["Yes","No"]},
+                {"id":"46","type":"radio","name":"Edema","options":["Yes","No"]}
+               ],
+               "observation":[],
+            "emergancyTransport": [
+                "Decreased level of consciousness",
+                "Persistent chest pain",
+                "Lower SpO2 with dyspnea, wheezing, cold sweats, and cyanosis",
+                "Asphyxia",
+                "Respiratory distress with edema (suspected cardiac failure)",
+                "SpO2 does not increase even when 2L of oxygen is used",
+                "*Low SpO2 may be observed once if there are no other symptoms"
+            ],
+            "response": [
+                "Call for retest after 30 minutes after bed-up: If there is no abnormality in vital signs and no other symptoms after 30 minutes, follow-up observation.",
+                "When phlegm is accumulated, if suctioning is possible, perform suctioning",
+                "If suctioning is not possible, remove sputum from oral cavity, squeezing",
+                "If suctioning is not possible, remove oral phlegm, squeezing and tapping method",
+                "In case of asphyxia: Remove oral phlegm and suggest the Heimlich maneuver",
+                "If oxygen administration is indicated but no numerical value is given: Start 1L of oxygen at SpO2: 90% or less; if no improvement after 5 minutes, administer up to 2L of oxygen.",
+                "If there is no improvement after 5 minutes, oxygen may be administered up to 2L. (Be sure to consult with the physician. If the patient has a history of COPD, be aware of the symptoms of narcosis.) ",
+                "*Narcosis: Decreased level of consciousness, respiratory urgency, tachycardia, headache, sweating ",
+                "Narcosis: decreased level of consciousness, *respiratory urgency, tachycardia, headache, sweating *Narcosis: high fever or coldness may cause vasoconstriction and prevent successful measurement"
+            ]
+        }
+    },
+    {
+        "Disturbance of consciousness": {
+           
+            "radioButton": [
+                {"id":"48","type":"selectBox","name":"Level of consciousness: JCS","options":["クリア","Ⅰ-1","Ⅰ−2","Ⅰ−3","Ⅱ−10","Ⅱ−20","Ⅱ−30","Ⅲ−100","Ⅲ−200","Ⅲ−300"]},
+                {"id":"49","type":"input","name":"Status at the time of discovery"},
+                {"id":"50","type":"radio","name":"Sleeping pills, psychotropic drugs","options":["Yes","No"]},
+                {"id":"51","type":"input","name":"Respiratory condition"},
+                {"id":"52","type":"radio","name":"Convulsions","options":["Yes","No"]},
+                {"id":"53","type":"radio","name":"Paralysis","options":["Yes","No"]},
+                {"id":"54","type":"radio","name":"Severe headache","options":["Yes","No"]},
+                {"id":"55","type":"radio","name":"Vomiting","options":["Yes","No"]},
+                {"id":"56","type":"radio","name":"History of diabetes mellitus","options":["Yes","No"]}
+              ],
+              "observation":[],
+            "emergancyTransport": [
+                "JCS III-300 (unresponsive to pain stimuli)",
+                "Generalized convulsions",
+                " Severe headache, vomiting",
+                "Paralysis",
+                "Cyanosis, snore-like breathing",
+                "Hypoglycemia is suspected, but glucose intake is difficult."
+            ],
+            "response": [
+                "If vagus nerve reflex is suspected: Lie on the bed, elevate the lower extremities, and observe for.",
+                "15 minutes before recalling the patient.",
+                "If there is no abnormality after 15 minutes, take vitals 2 hours later. ",
+                "If hypoglycemia is likely, take glucose if available, or sugar (4-5 sticks of sugar, a soft drink or a glass of juice, etc.).",
+                "A glass of soft drink or juice, etc.",
+                "Call again 20 minutes after ingestion: if symptoms do not improve, transport to emergency room."
+            ]
+        }
+    },
+    {
+        "Convulsions": {
+           
+            "radioButton": [
+
+                {"id":"57","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"58","type":"input","name":"Duration"},
+                
+                {"id":"61","type":"radio","name":"Generalized or localized","options":["systemic","Locality"],"dependentId":"60","dependentValue":"Locality"},
+                {"id":"60","type":"input","name":"Generalized or localized-Locality","isDependent":"1"},
+               
+
+                {"id":"62","type":"radio","name":"History of convulsions","options":["Yes","No"]},
+                {"id":"63","type":"radio","name":"Dyspnea","options":["Yes","No"]},
+                {"id":"64","type":"radio","name":"Individual Instructions","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Consciousness disturbance",
+                "Generalized convulsion lasting more than 5 minutes",
+                "Cyanosis, low SpO2"
+            ],
+            "response": [
+                "Advise use of individual instructions. ",
+                "Ensure safety: lie face down to prevent choking due to vomiting ",
+                "Vital signs and recall after 1 hour"
+            ]
+        }
+    },
+    {
+        "Hypertension": {
+           
+            "radioButton": [
+                {"id":"65","type":"radio","name":"Respiratory distress","options":["Yes","No"]},
+                {"id":"66","type":"radio","name":"Cyanosis","options":["Yes","No"]},
+                {"id":"67","type":"radio","name":"Wheezing","options":["Yes","No"]},
+                {"id":"68","type":"radio","name":"Shoulder breathing","options":["Yes","No"]},
+                {"id":"69","type":"radio","name":"Pain","options":["Yes","No"]},
+                {"id":"70","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+               
+                {"id":"72","type":"radio","name":"Paralysis","options":["Yes","No"],"dependentId":"71","dependentValue":"Yes"},
+                {"id":"71","type":"input","name":"Paralysis-Yes","isDependent":"1"},
+                {"id":"73","type":"radio","name":"Headache","options":["Yes","No"]},
+                {"id":"74","type":"radio","name":"Nausea","options":["Yes","No"]},
+                {"id":"75","type":"radio","name":"Vomiting","options":["Yes","No"]},
+                {"id":"76","type":"radio","name":"Dysrhythmia","options":["Yes","No"]},
+                {"id":"77","type":"radio","name":"Vertigo","options":["Yes","No"]},
+                {"id":"78","type":"radio","name":"Chest pain","options":["Yes","No"]}
+           ],
+           "observation":[],
+            "emergancyTransport": [
+                "Severe headache, paralysis, dysrhythmia",
+                "Chest pain, back pain, convulsions",
+                "Decreased level of consciousness",
+                "Dyspnea, orthopnea"
+            ],
+            "response": [
+                "Encourage bed rest, bed up, and call for vital signs and recall 30 minutes later.",
+                "Advise patient to take any additional medications if available.",
+                "If patient has no other symptoms, check vital signs 2 hours later."
+            ]
+        }
+    },
+    {
+        "Low blood pressure": {
+           
+            "radioButton": [
+                {"id":"79","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"80","type":"radio","name":"Pain","options":["Yes","No"]},
+                {"id":"81","type":"input","name":"Respiratory condition"},
+
+                {"id":"83","type":"radio","name":"Chest symptoms","options":["Yes","No"],"dependentId":"81","dependentValue":"Yes"},
+                {"id":"82","type":"input","name":"Chest symptoms-Yes","isDependent":"1"},
+                {"id":"84","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"85","type":"radio","name":"Poor complexion","options":["Yes","No"]},
+                {"id":"87","type":"radio","name":"Antihypertensive medication","options":["Yes","No"],"dependentId":"86","dependentValue":"Yes"},
+                {"id":"86","type":"input","name":"Antihypertensive medication-Yes","isDependent":"1"}
+                
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Disturbance of consciousness",
+                "Chest symptoms, back pain",
+                "Unable to measure due to error"
+            ],
+            "response": [
+                "Recall vital signs and call again after 30 minutes of supine and elevated lower limbs",
+                "* If there is a change in condition, request another call immediately.",
+                "If there is no complication at the time of re-call, the patient's vital signs will be retested 2 hours later.",
+                "Consult physician if antihypertensive medications are taken after dinner or before sleep.",
+                "If antihypertensive medication is taken before breakfast, do not take if blood pressure is below 100 and check with the facility nurse for instructions.",
+                "After defecation → possible vagus nerve reflex",
+                "After standing up → Possible anemia or orthostatic hypotension"
+            ]
+        }
+    },
+    {
+        "Chest pain, back pain": {
+           
+            "radioButton": [
+                {"id":"88","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"89","type":"input","name":"Duration"},
+                {"id":"90","type":"input","name":"Area"},
+                {"id":"91","type":"input","name":"Duration ・ Location ・ Extent of pain"},
+                {"id":"92","type":"input","name":"Type of pain"},
+
+                {"id":"93","type":"radio","name":"Respiratory distress","options":["Yes","No"]},
+                {"id":"94","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"95","type":"radio","name":"Cyanosis","options":["Yes","No"]},
+                {"id":"96","type":"radio","name":"Pallor","options":["Yes","No"]},
+                {"id":"97","type":"input","name":"Instructions for chest pain-Yes","isDependent":"1"},
+                {"id":"99","type":"radio","name":"Instructions for chest pain","options":["Yes","No"],"dependentId":"96","dependentValue":"Yes"},
+                {"id":"100","type":"radio","name":"For lumbar back pain: rash","options":["Yes","No"]},
+                {"id":"101","type":"radio","name":"For lumbar back pain: redness","options":["Yes","No"]},
+                {"id":"102","type":"radio","name":"For lumbar back pain: history of falls","options":["Yes","No"]}
+               ],
+               "observation":[],
+            "emergancyTransport": [
+                "Sudden onset, lasting more than 10 minutes",
+                "Cold sweat, labored breathing",
+                "Tightening pain",
+                "Difference in blood pressure from side to side, hypertension"
+            ],
+            "response": [
+                "If the patient has an abortive medication, advise use of the medication and request a call back after use.",
+                " →If symptoms do not disappear, send the patient to the emergency room.",
+                "→If symptoms disappear, take vitals 30 minutes later and request another call.",
+                "If symptoms are gone, take vitals 30 minutes later and ask to be called back."
+            ]
+        }
+    },
+    {
+        "headache": {
+            "inputField": {
+                "Site of injury": "",
+                "Duration": "",
+                "Duration of pain: Is it increasing or unbearable?": ""
+            },
+            "radioButton": {
+                "Decreased level of consciousness": "",
+                "Nausea": "",
+                "Vomiting": "",
+                "Paralysis": "",
+                "Dizziness": "",
+                "Eye conjunctival redness": "",
+                "Indication of pain": ""
+            },
+            "observation":[],
+            "emergancyTransport": [
+                "Severe pain",
+                "Nausea, vomiting, dizziness",
+                "Paralysis",
+                "Decreased level of consciousness ",
+                "Eyelid conjunctival hyperemia (possible glaucoma attack)→want to check with doctor"
+            ],
+            "response": [
+                "Took an abortive medication",
+                "Vital signs measured 2 hours later"
+            ]
+        }
+    },
+    {
+        "difficulty in speaking or understanding": {
+           
+            "radioButton": [
+                {"id":"103","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"104","type":"input","name":"Site of injury"},
+                {"id":"105","type":"input","name":"Duration"},
+                {"id":"106","type":"input","name":"Duration of pain: Is it increasing or unbearable?"},
+
+                {"id":"107","type":"radio","name":"Nausea","options":["Yes","No"]},
+                {"id":"108","type":"radio","name":"Vomiting","options":["Yes","No"]},
+
+                {"id":"110","type":"radio","name":"Paralysis","options":["Yes","No"],"dependentId":"109","dependentValue":"Yes"},
+                {"id":"109","type":"input","name":"Paralysis-Yes","isDependent":"1"},
+                {"id":"111","type":"radio","name":"Dizziness","options":["Yes","No"]},
+                {"id":"112","type":"radio","name":"Eye conjunctival redness","options":["Yes","No"]},
+              
+                {"id":"114","type":"radio","name":"Indication of pain","options":["Yes","No"],"dependentId":"113","dependentValue":"Yes"},
+                {"id":"113","type":"input","name":"Indication of pain-Yes","isDependent":"1"}
+                
+                ],
+                "observation":[],
+            "emergancyTransport": [
+                "Hypertension",
+                "Disorders of consciousness",
+                "Paralysis"
+            ],
+            "response": [
+                "If there are no abnormalities in vitals, retest 2 hours later."
+            ]
+        }
+    },
+    {
+        "dizziness": {
+          
+            "radioButton": [
+                {"id":"115","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"116","type":"input","name":"Vertigo: Rotatory (spinning in a circle) / Floating (fluttering, difficulty in balancing)"},
+                {"id":"117","type":"radio","name":"Paralysis","options":["Yes","No"]},
+                {"id":"118","type":"radio","name":"Dysrhythmias","options":["Yes","No"]},
+                {"id":"119","type":"radio","name":"Nausea, vomiting","options":["Yes","No"]},
+                {"id":"120","type":"radio","name":"Chest pain","options":["Yes","No"]},
+                {"id":"121","type":"radio","name":"Headache","options":["Yes","No"]},
+                {"id":"122","type":"radio","name":"Palpitations","options":["Yes","No"]},
+                {"id":"123","type":"radio","name":"Hearing difficulties","options":["Yes","No"]},
+                {"id":"124","type":"radio","name":"Recent history of falls","options":["Yes","No"]}  
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Paralysis",
+                "Discomfort in speech",
+                "Vomiting",
+                "Decreased level of consciousness"
+            ],
+            "response": [
+                "If vitals are normal, retest 2 hours later."
+            ]
+        }
+    },
+    {
+        "abdominal pain": {
+         
+            "radioButton":[
+                {"id":"125","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"126","type":"input","name":"Duration"},
+                {"id":"127","type":"input","name":"Site"},
+                {"id":"128","type":"input","name":"Type of pain, whether it comes in waves or intensifies"},
+                {"id":"129","type":"radio","name":"Pain at rest","options":["Yes","No"]},
+                {"id":"130","type":"radio","name":"Tenderness","options":["Yes","No"]}
+               
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Cold sweat, epicardial pain",
+                "Severe abdominal pain",
+                "Repeated vomiting"
+            ],
+            "response": [
+                "Use of an abortive medication, if indicated.",
+                "Check vitals after 1 hour and call again if symptoms persist"
+            ]
+        }
+    },
+    {
+        "hematemesis/bleeding": {
+           
+            "radioButton": [
+                {"id":"131","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"132","type":"input","name":"Amount of bleeding"},
+                {"id":"133","type":"radio","name":"Abdominal pain","options":["Yes","No"]},
+                {"id":"134","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"135","type":"radio","name":"History of hemorrhoids","options":["Yes","No"]},
+                {"id":"136","type":"radio","name":"Oral injury","options":["Yes","No"]},
+                {"id":"137","type":"radio","name":"Iron medication","options":["Yes","No"]}
+               
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Hematemesis (black vomit)",
+                "Decreased level of consciousness, cold sweat",
+                "Decreased blood pressure, bradycardia, tachycardia",
+                "Severe abdominal pain",
+                "If the amount of hematemesis or hemorrhage is small, the patient may be monitored. If in doubt, consult a physician."
+            ],
+            "response": [
+                "In case of hematemesis, advise bed-up and side lying position.",
+                "Measure vital signs 2 hours later."
+            ]
+        }
+    },
+    {
+        "diarrhea": {
+            "radioButton": [
+
+                {"id":"138","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"139","type":"radio","name":"Cold sweat","options":["Yes","No"]},
+                {"id":"140","type":"radio","name":"Abdominal pain","options":["Yes","No"]},
+                {"id":"141","type":"radio","name":"Respiratory distress","options":["Yes","No"]},
+                {"id":"142","type":"radio","name":"Skin rash","options":["Yes","No"]},
+                {"id":"143","type":"radio","name":"Vomiting","options":["Yes","No"]},
+                {"id":"144","type":"radio","name":"Vomiting ・Lowering blood","options":["Yes","No"]},
+                {"id":"145","type":"radio","name":"Laxatives","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Cold sweat, skin rash",
+                "Abdominal pain, hemorrhage → to hematemesis and hemorrhage manual",
+                "Decreased blood pressure"
+            ],
+            "response": [
+                "Vital signs are measured after 2 hours.",
+                "Drink fluids as much as possible to prevent dehydration.",
+                "Advise skipping laxatives when necessary (if packaged in a single packet, wait for the patient to take the packet and leave it until the nurse arrives)"
+            ]
+        }
+    },
+    {
+        "oliguria, removal of balloon catheter": {
+         
+            "radioButton": [
+                {"id":"146","type":"input","name":"Method of elimination: incontinence, ba (date of catheter change, frequency of catheter change), toileting"},
+                {"id":"147","type":"input","name":"Final voiding"},
+                {"id":"148","type":"input","name":"Usual urine output"},
+                {"id":"149","type":"radio","name":"Last voiding: incontinence, Ba (date of catheter change, frequency of catheter change), toileting, usual urine output","options":["Yes","No"]},
+                {"id":"150","type":"radio","name":"Abdominal distention","options":["Yes","No"]},
+                {"id":"151","type":"radio","name":"Abdominal pain","options":["Yes","No"]},
+                {"id":"152","type":"input","name":"Amount of water consumed"}
+                
+                
+             ],
+             "observation":[],
+            "emergancyTransport": [
+                "Abdominal distention",
+                "Abdominal pain"
+            ],
+            "response": [
+                "Suggested milking of Ba.",
+                "Adjustment of body position, such as bed raising",
+                "Encourage drinking water in case of oliguria",
+                "If the patient urinates on his/her own, deal with the incontinence."
+            ]
+        }
+    },
+    {
+        "Removal of gastrostomy, nephrostomy, cystostomy": {
+            "inputField": {},
+            "radioButton": [  {"id":"153","type":"radio","name":"Bleeding","options":["Yes","No"]}],
+            "observation":[],
+            "emergancyTransport": [
+                "Possible obstruction, transport to emergency room."
+            ],
+            "response": []
+        }
+    },
+    {
+        "Internal medication": {
+            "inputField": {
+                "Drugs": ""
+            },
+            "observation":[],
+            "radioButton":[
+                {"id":"153","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"154","type":"radio","name":"Urticaria","options":["Yes","No"]},
+                {"id":"155","type":"input","name":"Drugs"}
+                ],
+            "emergancyTransport": [
+                "Bradycardia, hypotension, respiratory distress, urticaria",
+                "Decreased level of consciousness"
+            ],
+            "response": [
+                "Refusing or dropping medication",
+                "Try using medication jelly, etc.",
+                "Crushed tablets",
+                "Psychotropic drugs and sleeping pills: Can be taken until midnight.",
+                "Parkinson's disease drugs and malignant tumor drugs: Can be taken internally to the extent possible.",
+                "*SKIP all drugs if they are packaged in a single package, as it is difficult to sort out only specific drugs.?",
+                "Incorrect medication",
+                "Mr. B took Mr. A's medicine by mouth: Mr. A basically took no medicine by mouth",
+                "Antihypertensive drugs: Blood pressure is measured before sleep, and recalled if hypotension is present.",
+                "Psychotropic drugs and sleeping pills: Be careful of lightheadedness and falls.",
+                "Hypoglycemic drugs: watch for hypoglycemic symptoms (cold sweats, dizziness, tremors, mood discomfort)",
+                "Laxatives: watch for abdominal symptoms"
+            ]
+        }
+    },
+    {
+        "Restlessness": {
+            "observation":[],
+            "radioButton": [
+                {"id":"153","type":"radio","name":"Pain and distress","options":["Yes","No"]},
+                {"id":"154","type":"radio","name":"Individual instructions","options":["Yes","No"]}
+                ],
+            "emergancyTransport": [
+                "Intense pain",
+                "Respiratory distress"
+            ],
+            "response": [
+                "Use of Humanitude",
+                "Make eye contact with the person's face",
+                "Use positive words and a voice that is not too loud.",
+                "Touch sensitive areas such as the feet, back, and shoulders first, then the face, hands, and other sensitive areas. ",
+                "Offer a hot drink (be careful of the sugar content if the patient has diabetes).",
+                "If there are individual instructions, use them."
+            ]
+        }
+    },
+    {
+        "accidental ingestion": {
+           
+            "radioButton": [
+                
+                {"id":"155","type":"input","name":"Item swallowed by mistake"},
+                {"id":"156","type":"input","name":"Amount accidentally swallowed"},
+                {"id":"157","type":"radio","name":"Decreased level of consciousness","options":["Yes","No"]},
+                {"id":"158","type":"radio","name":"Abdominal pain","options":["Yes","No"]},
+                {"id":"159","type":"radio","name":"Dyspnea","options":["Yes","No"]},
+                {"id":"160","type":"radio","name":"Nausea","options":["Yes","No"]},
+                {"id":"161","type":"radio","name":"Cyanosis","options":["Yes","No"]}
+               ],
+               "observation":[],
+            "emergancyTransport": [
+                "PTP sheets, sharp objects, poisonous substances, batteries",
+                "Abdominal pain, nausea",
+                "Dyspnea, choking"
+            ],
+            "response": [
+                "Bed up and side lying position to prevent aspiration due to reflux",
+                "Measure vital signs 2 hours later"
+            ]
+        }
+    },
+    {
+        "Complaints about eyes": {
+            "inputField": {
+                "Pain: Duration, increasing or falling in waves": ""
+            },
+            "radioButton": [
+                {"id":"162","type":"input","name":"Pain: Duration, increasing or falling in waves"},
+                {"id":"163","type":"radio","name":"Diplopia","options":["Yes","No"]},
+                {"id":"164","type":"radio","name":"Vision loss","options":["Yes","No"]},
+                {"id":"165","type":"radio","name":"Nausea","options":["Yes","No"]},
+                {"id":"166","type":"radio","name":"Vomiting","options":["Yes","No"]},
+                {"id":"167","type":"radio","name":"Bleeding","options":["Yes","No"]},
+                {"id":"168","type":"radio","name":"Hyperemia","options":["Yes","No"]},
+                {"id":"169","type":"radio","name":"Eyelid edema","options":["Yes","No"]},
+                {"id":"170","type":"radio","name":"Feeling of heat","options":["Yes","No"]},
+                {"id":"171","type":"radio","name":"Tears","options":["Yes","No"]}
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Sudden loss of vision, double vision",
+                "Severe pain with nausea and vomiting.",
+                "Pain increases with time."
+            ],
+            "response": [
+                "If a foreign object is present, clean to the extent possible. ",
+                "Vital signs are measured after 2 hours."
+            ]
+        }
+    },
+    {
+        "Burns": {
+            "inputField": {
+                "part": "",
+                "Area   ": "",
+                "Color tone": ""
+            },
+            "observation":[],
+            "radioButton": [
+                {"id":"172","type":"input","name":"part"},
+                {"id":"173","type":"input","name":"Area"},
+                {"id":"174","type":"input","name":"Color tone"},
+                {"id":"175","type":"radio","name":"Blisters","options":["Yes","No"]},
+                {"id":"176","type":"input","name":"Decreased level of consciousness","options":["Yes","No"]}
+             ],
+            "emergancyTransport": [
+                "Decreased level of consciousness",
+                "Extensive burns",
+                "Facial burns (possibly airway burns)"
+            ],
+            "response": [
+                "Cooling to the extent possible",
+                "Protect blisters with Vaseline gauze to prevent rupture"
+            ]
+        }
+    },
+    {
+        "Cardiopulmonary arrest": {
+           
+            "radioButton": [
+                {"id":"177","type":"input","name":"Response to pain stimulus"}
+
+            ],
+            "observation":[],
+            "emergancyTransport": [
+                "Vital measurements not available",
+                "Unresponsive to pain stimulus"
+            ],
+            "response": [
+                "Use of AED"
+            ]
+        }
+    }
+]

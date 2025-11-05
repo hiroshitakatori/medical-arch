@@ -1,0 +1,116 @@
+/*---------------login-page---------------*/
+.page-ath-wrap {
+    display: flex;
+    min-height: 100vh
+}
+
+.page-ath-right {
+    flex-direction: row;
+}
+
+.page-ath-left {
+    flex-direction: row-reverse;
+}
+
+.page-ath-logo {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.page-ath-logo img {
+    max-width: 250px;
+}
+
+.page-ath-form .auth-head {
+    text-align: center;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.page-ath-form .auth-head h6 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $black1;
+}
+
+.page-ath-form .auth-head p {
+    color: $light-dark;
+    font-weight: 400;
+}
+
+
+.page-ath-form {
+    max-width: 490px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+.page-ath-header {
+    padding-top: 40px
+}
+
+.page-ath-footer {
+    padding-bottom: 30px
+}
+
+.page-ath-content {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.page-ath-gfx {
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.form-footer-link p {
+    color: $black1;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+
+.form-footer-link p a {
+    color: $blue-light;
+}
+
+.forgot-link a {
+    color: $blue-light;
+    font-weight: 500;
+}
+@media screen and (max-width: 991px) {
+    .page-ath-wrap{
+        .page-ath-content,
+        .page-ath-gfx{
+            width: 100%;
+        }
+        .page-ath-gfx{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .page-ath-form{
+        padding:50px 14px ;
+    }
+    .page-ath-wrap{
+        .page-ath-content,
+        .page-ath-gfx{
+            width: 100%;
+        }
+        .page-ath-gfx{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// Mixins Function
+// --------------------------
+
+@mixin FontAwesome($content, $color, $top, $left, $fontWeight) {
+    content: $content;
+    color: $color;
+    top: $top;
+    left: $left;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $fontWeight;
+    transition: 0.4s;
+}
+// @include FontAwesome("\f105", $theme-color, 0, 0, 900);
+
+@mixin Remixicon($content, $color, $top, $left) {
+    content: $content;
+    font-family: "remixicon" !important;
+    position: absolute;
+    color: $color;
+    top: $top;
+    left: $left;
+    height: auto;
+    line-height: initial;
+    transition: color 0.3s;
+}
+
+@mixin custom-scrollbar($color, $borderRadius) {
+    background-color: $color;
+    border-radius: $borderRadius;
+}
+
+@mixin displayFlex($display, $alignitems, $justifycontent) {
+    display: $display;
+    align-items: $alignitems;
+    justify-content: $justifycontent;
+}
+//@include displayFlex(flex, center, space-between)
+@mixin circle($size, $radius, $circlecolor) {
+    width: $size;
+    height: $size;
+    min-width: $size;
+    min-height: $size;
+    border-radius: $radius;
+    background-color: $circlecolor;
+}
+//@include circle(100px, 50%, $alice-blue)
+@mixin transition($type, $time, $animation) {
+    transition:$type $time $animation;
+    -webkit-transition:$type $time $animation;
+    -moz-transition:$type $time $animation;
+    -o-transition:$type $time $animation;
+}
+//@include transition(all, 0.4s, ease)

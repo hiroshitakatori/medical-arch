@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" />
+   <link rel="stylesheet" href="">
+</head>
+
+<body
+   style="font-family: 'Rubik', sans-serif; margin: 0px;padding-top: 0;padding-bottom: 0;padding-top: 0;padding-bottom: 0;background-color: #f1f1f1;background-repeat: repeat;width: 100% !important;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;">
+   <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+   </style>
+   <table style="max-width: 600px; width: 600px; margin: 0px auto;" cellpadding="0" cellspacing="0">
+      <tbody>
+         <tr>
+            <td style="padding: 40px 0px 10px; background-color: #fff; border-radius: 10px;">
+               <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                  <tbody>
+                     <tr>
+                        <td style="padding: 0px 50px;">
+                           <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                              <tr>
+                                 <td style="padding-bottom: 30px; text-align: left;">
+                                    <img src="https://binoxbargains.com/assets/img/logo_dark.png" alt="logo">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="padding-bottom: 20px;">
+                                    <h1
+                                       style="font-size: 26px; font-weight: 700; color: #333230; margin: 0; margin-bottom: 30px; font-family: 'Poppins', sans-serif; text-align: left;">
+                                       Thanks for placing your order</h1>
+                                    <p
+                                       style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                                       Order Date : <b
+                                          style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;">
+                                          <%= order.date%>
+                                       </b>
+                                    </p>
+                                    <p
+                                       style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                                       Order Id : <b
+                                          style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                             order.order_id%></b>
+                                    </p>
+                                    <p
+                                       style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                                       Payment Type : <b
+                                          style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                             order.payment_type%></b>
+                                    </p>
+                                    <p
+                                       style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                                       Email : <b
+                                          style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                             order.email%></b>
+                                    </p>
+                                    <%if (order.is_pickup==false) { %>
+                                       <p
+                                          style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                                          Deliver to : <b
+                                             style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                                order.delivery_address%></b>
+                                       </p>
+                                       <% } %>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="padding-bottom: 30px;">
+                                    <div style="padding:14px 14px 0px; border-radius: 8px; background-color: #f2f2f2;">
+                                       <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                                          <tbody>
+                                             <% for (var i=0; i < order.items.length; i++) { %>
+                                                <tr style="vertical-align: top;">
+                                                   <td style="width: auto; padding-bottom: 15px;padding-right: 5px;">
+                                                      <p
+                                                         style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                         <%= order.items[i].item_name %>
+                                                      </p>
+                                                   </td>
+                                                   <td style="width: 80px; padding-bottom: 15px;">
+                                                      <p
+                                                         style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                         £<%= order.items[i].price %>
+                                                      </p>
+                                                   </td>
+                                                   <td style="width: 80px; padding-bottom: 15px;padding-left: 5px;">
+                                                      <p
+                                                         style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                         x <%= order.items[i].quantity %>
+                                                      </p>
+                                                   </td>
+                                                </tr>
+                                                <% } %>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+
+                                 <td style="padding-bottom: 20px;">
+                                    <div style="display: flex;justify-content: end;">
+                                       <table style="width: 50%;" cellpadding="0" cellspacing="0">
+                                          <tbody>
+                                             <tr style="vertical-align: top;">
+                                                <td style="width: auto; padding-bottom: 10px;padding-right: 5px;">
+                                                   <p
+                                                      style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                                                      Sub Total</p>
+                                                </td>
+                                                <td style="width: 80px; padding-bottom: 10px; text-align: right;">
+                                                   <p
+                                                      style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                      £<%= order.sub_total%>
+                                                   </p>
+                                                </td>
+                                             </tr>
+                                             <tr style="vertical-align: top;">
+                                                <td style="width: auto; padding-bottom: 10px;padding-right: 5px;">
+                                                   <p
+                                                      style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                                                      Tax</p>
+                                                </td>
+                                                <td style="width: 80px; padding-bottom: 10px; text-align: right;">
+                                                   <p
+                                                      style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                      £<%= order.tax%>
+                                                   </p>
+                                                </td>
+                                             </tr>
+                                             <%if (order.is_pickup==false) { %>
+                                                <tr style="vertical-align: top;">
+                                                   <td style="width: auto; padding-bottom: 10px;padding-right: 5px;">
+                                                      <p
+                                                         style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                                                         Delivery Charges</p>
+                                                   </td>
+                                                   <td style="width: 80px; padding-bottom: 10px; text-align: right;">
+                                                      <p
+                                                         style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                         £<%= order.delivery_charge%>
+                                                      </p>
+                                                   </td>
+                                                </tr>
+                                                <% } %>
+                                          </tbody>
+                                          <tfoot>
+                                             <td
+                                                style="width: auto; padding-bottom: 10px; padding-top: 10px; padding-right: 5px; border-top: 1px solid #818181;">
+                                                <p
+                                                   style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                                                   Total</p>
+                                             </td>
+                                             <td
+                                                style="width: 80px; padding-bottom: 10px; padding-top: 10px;  text-align: right;border-top: 1px solid #818181;">
+                                                <p
+                                                   style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                                                   £<%= order.total_amount%>
+                                                </p>
+                                             </td>
+                                          </tfoot>
+                                       </table>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="padding-bottom: 30px;">
+                                    <div style="display: block; font-family: 'Poppins', sans-serif;">
+                                       <p
+                                          style="font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; line-height: 20px; color: #818181;margin: 0; letter-spacing: 0.5px; line-height: 24px;">
+                                          Regards,</p>
+                                       <h6
+                                          style="font-family: 'Poppins', sans-serif;margin:0;font-size: 15px; font-weight: 600; color: #1e2e50;">
+                                          Binox Bargains</h6>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</body>
+
+</html>

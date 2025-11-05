@@ -1,0 +1,41 @@
+{
+    "PORT": 8001,
+    "JWT_ACCESS_SECRET": "your_jwt_access_secret_here",
+    "JWT_REFRESH_SECRET": "your_jwt_refresh_secret_here",
+    "JWT_ACCESS_TIME": "9999 years",
+    "JWT_REFRESH_TIME": "30d",
+    "REDIS_HOST": "127.0.0.1",
+    "REDIS_PORT": "6379",
+    "DB_CONN_STRING": "mongodb+srv://username:password@cluster.mongodb.net/database_name",
+    "API_KEY_ENC": "your_encryption_key_here",
+    "API_KEY_DEC": "your_decryption_key_here",
+    "API_ENCRYPT_VI_KEY": "your_iv_key_here",
+    "API_DECRYPT_VI_KEY": "your_decrypt_iv_key_here",
+    "ROUTE_URL": "",
+    "OUTER_KEY_USER": "your_outer_key_user_here",
+    "OUTER_KEY_PAYLOAD": "your_outer_key_payload_here",
+    
+    "MAIL_USER": "your_email@gmail.com",
+    "MAIL_HOST": "smtp.gmail.com",
+    "MAIL_PASSWORD": "your_app_password_here",
+    "saltRounds": 10,
+    
+    "MAIL_SENDER_NO_REPLY": "noreply@example.com",
+    "SENDGRID_API_KEY": "your_sendgrid_api_key_here",
+    
+    "GOOGLE_CLIENT_ID": "your_google_client_id_here",
+    "GOOGLE_CLIENT_SECRET": "your_google_client_secret_here",
+   
+    "PHONE_NUMBER": "",
+    "BULK_SMS_USERNAME": "your_bulksms_username",
+    "BULK_SMS_PASSWORD": "your_bulksms_password",
+    "LOGO_PATH": "/uploads/images/logo.svg",
+    "MAIL_SENDER": "Medical Arch <noreply@example.com>",
+    "FACILITY_URL": "http://facility.medical-arch.com/",
+    "STAFF_URL": "http://medical-arch.com/",
+
+    "AUTHTOKEN": "your_twilio_auth_token_here",
+    "ACCOUNTSID": "your_twilio_account_sid_here",
+    "AUTHKEY": "your_twilio_auth_key_here"
+}
+

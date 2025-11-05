@@ -1,0 +1,61 @@
+{
+  "name": "on-call-system-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.5.1",
+    "assert": "^2.0.0",
+    "axios": "^1.4.0",
+    "base-64": "^1.0.0",
+    "crypto-js": "^4.1.1",
+    "date-fns": "^2.30.0",
+    "dayjs": "^1.11.9",
+    "html2canvas": "^1.4.1",
+    "i18next": "^22.5.0",
+    "i18next-browser-languagedetector": "^7.0.2",
+    "i18next-http-backend": "^2.2.1",
+    "iconsax-react": "^0.0.8",
+    "jspdf": "^2.5.1",
+    "moment": "^2.29.4",
+    "notistack": "^3.0.1",
+    "php-serialize": "^4.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-highlight-words": "^0.20.0",
+    "react-i18next": "^12.3.1",
+    "react-otp-input": "^3.0.2",
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^6.11.2",
+    "react-scripts": "5.0.1",
+    "sass": "^1.62.1",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+.main-content-wrapper {
+    min-height: calc(100vh - 133px);
+}
+
+.pagination_flex {
+    gap: 24px;
+
+    .prev_btn,
+    .next_btn {
+        color: $black1;
+        font-size: 16px;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+.details_list {
+    li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        label {
+            width: 40%;
+        }
+
+        span {
+            width: 60%;
+        }
+    }
+}
+
+.custom_card {
+    .custom_card_body {
+        border: 1px solid $light-gray1;
+        border-radius: 8px;
+        padding: 24px;
+    }
+}
+
+.border_card {
+    border: 1px solid $light-gray1;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.shift_badge {
+    display: inline-block;
+    min-width: 120px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    color: $black1;
+    font-weight: 500;
+    background-color: $black1;
+    border: 1px solid #707070;
+
+    &.badge_primary {
+        background-color: $light-blue;
+    }
+
+    &.badge_success {
+        background-color: $light-success;
+    }
+
+    &.badge_warning {
+        background-color: $light-warning;
+    }
+
+    &.badge_danger {
+        background-color: $light-danger;
+    }
+}
+
+.shift-list-table {
+    .td_weekday {
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 16px;
+
+                span {
+                    flex-shrink: 0;
+                    display: inline-block;
+                    width: 20px;
+                    line-height: 1;
+                }
+
+                .shift_badge {
+                    display: inline-block;
+                    min-width: 80px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+}
+
+.responder_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 14px;
+
+    li {
+        width: calc(25% - 14px);
+        text-align: left;
+        flex-shrink: 0;
+    }
+}
+
+.add-shift-table {
+    .ant-table-tbody {
+        tr {
+            td:first-child {
+                padding: 0px !important;
+            }
+
+            td {
+                padding: 12px 4px !important;
+
+                &.td_staff_name {
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}
+
+.error_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 133px);
+    padding: 80px 0px;
+
+    h2 {
+        font-size: 100px;
+        font-weight: 700;
+        color: $black1;
+    }
+
+    h3 {
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 20px;
+        color: $light-dark;
+        margin-bottom: 30px;
+    }
+}
+
+.leader_and_responder_table {
+    &.custom_table_wrapper {
+        .ant-table {
+            .ant-table-content {
+                table {
+                    .td_responders {
+                        min-width: 200px;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .error_wrapper {
+        height: calc(100vh - 133px);
+        padding: 60px 0px;
+
+        h2 {
+            font-size: 80px;
+            font-weight: 700;
+            color: $black1;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            color: $light-dark;
+            margin-bottom: 30px;
+        }
+    }
+
+    .responder_list {
+        li {
+            width: calc(50% - 14px);
+            text-align: left;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .responder_list {
+        li {
+            width: 100%;
+            text-align: left;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.label_flex_btn {
+    label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        .flex_item_cb {
+            width: 100%;
+        }
+    }
+}
+
+.example {
+    margin: 20px 0;
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}

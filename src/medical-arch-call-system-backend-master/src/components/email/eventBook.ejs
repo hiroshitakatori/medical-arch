@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="">
+</head>
+
+<body style="font-family: 'Rubik', sans-serif; margin: 0px;padding-top: 0;padding-bottom: 0;padding-top: 0;padding-bottom: 0;background-color: #f1f1f1;background-repeat: repeat;width: 100% !important;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;">
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+  </style>
+  <table style="max-width: 600px; width: 600px; margin: 0px auto;" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="padding: 40px 0px 10px; background-color: #fff; border-radius: 10px;">
+          <table style="width: 100%;" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td style="padding: 0px 50px;">
+                  <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="padding-bottom: 30px; text-align: left;">
+                        <img src="https://binoxbargains.com/assets/img/logo_dark.png" alt="logo">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-bottom: 20px;">
+                        <h1 style="font-size: 26px; font-weight: 700; color: #333230; margin: 0; margin-bottom: 30px; font-family: 'Poppins', sans-serif; text-align: left;">
+                          Thanks for booking event</h1>
+                        <h4 style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                          Here,Your tickets Detail
+                        </h4>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                          Booking Id :
+                          <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                              event.booking.booking_id%></b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                          Event Name : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;">
+                            <%= event.event.name%>
+                          </b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                          Name : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;">
+                            <%= event.username%>
+                          </b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                          Mobile : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                    event.booking.mobile%></b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                          People : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                 event.booking.no_of_people%></b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px;">
+                          Payment Type : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;"><%-
+                                          event.booking.payment_type%></b>
+                        </p>
+
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                          Event Location : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;">
+                            <%= event.event.city%>
+                          </b>
+                        </p>
+                        <p style="font-family: 'Poppins', sans-serif;font-size: 14px; font-weight: 400; line-height: 20px; color: #818181; margin: 0px 0px 4px; line-height: 24px; ">
+                          Event Date : <b style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333230;">
+                            <%= event.time%>
+                          </b>
+                        </p>
+                      </td>
+                    </tr>
+                </td>
+              </tr>
+              <% for (var i=0; i < event.booking.tickets.length; i++) { %>
+              <tr>
+                <td style="padding-bottom: 30px; text-align: left;">
+                  <img src="https://api.binoxbargains.com/uploads/tickets/<%= event.booking.tickets[i].image %>" height="100px" width="100px">
+                </td>
+              </tr>
+              <% } %>
+              <tr>
+
+                <td style="padding-bottom: 20px;">
+                  <div style="display: flex;justify-content: end;">
+                    <table style="width: 50%;" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr style="vertical-align: top;">
+                          <td style="width: auto; padding-bottom: 10px;padding-right: 5px;">
+                            <p style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                              Number of people</p>
+                          </td>
+                          <td style="width: 80px; padding-bottom: 10px; text-align: right;">
+                            <p style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                              <%= event.booking.no_of_people%> x £<%= event.price%>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <td style="width: auto; padding-bottom: 10px; padding-top: 10px; padding-right: 5px; border-top: 1px solid #818181;">
+                          <p style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 700;word-break: break-all;">
+                            Total</p>
+                        </td>
+                        <td style="width: 80px; padding-bottom: 10px; padding-top: 10px;  text-align: right;border-top: 1px solid #818181;">
+                          <p style="font-family: 'Poppins', sans-serif;margin: 0px;color: #333230;font-size: 14px;font-weight: 600;word-break: break-all;">
+                            £<%= event.booking.amount%>
+                          </p>
+                        </td>
+                      </tfoot>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 30px;">
+                  <div style="display: block; font-family: 'Poppins', sans-serif;">
+                    <p style="font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; line-height: 20px; color: #818181;margin: 0; letter-spacing: 0.5px; line-height: 24px;">
+                      Regards,</p>
+                    <h6 style="font-family: 'Poppins', sans-serif;margin:0;font-size: 15px; font-weight: 600; color: #1e2e50;">
+                      Binox Bargains</h6>
+                  </div>
+                </td>
+              </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+</body>
+
+</html>

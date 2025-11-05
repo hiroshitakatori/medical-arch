@@ -1,0 +1,23 @@
+{
+    "register": ["post" , "/admin/register"],
+    "login": ["post" , "/facility/login"],
+    "otpverification": ["post" , "/facility/otp/verify/signup"],
+    "logout": ["patch" , "/facility/logout"],
+    "forgetpassword":["post","/facility/otp/get"],
+    "otpverificationpassword":["post","/facility/otp/verify"],
+    "resetpassword":["post","/facility/forgotPassword"],
+    "changePassword":["post","/facility/changePassword"],
+    
+     
+    "stafflist":["get","/admin/getStaff"],
+    "addstaff":["post","/admin/addStaff"],
+    "uploadfile":["post","/uploadImage/contract"],
+    "editstaff":["post", "/admin/updateStaff"],
+
+    "addfacility":["post", "/admin/addFacility"],
+    "editfacility":["post", "/facility/updateFacility"],
+    "commentOnReport":["post", "/facility/commentOnReport"],
+    "getprofile" :["get", "/facility/getProfile"]
+
+
+}

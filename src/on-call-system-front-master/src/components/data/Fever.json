@@ -1,0 +1,36 @@
+
+[
+    {
+        "fever":{
+      
+        "radioButton":{
+                "Shoulder breathing":"",
+                "cyanosis":"",
+                "phlegm entanglement":"",
+                "pain":"",
+                "decreased level of consciousness":"",
+                "Chills":""
+            }
+        }
+    },
+    {
+        "vomiting":{
+            "inputField":{
+                "Volume":"",
+                "Characteristics":"",
+                "Frequency":"",
+                "Bowel movements":"",
+                "History of bowel obstruction, cerebral infarction, etc.":""
+            },
+            "radioButton":{
+                "Smell of feces":"",
+                "Blood in stool":"",
+                "Persistent nausea":"",
+                "Decreased level of consciousness":"",
+                "Abdominal pain":"",
+                "Headache":"",
+                "Chest pain":""
+            }
+        }
+    }
+]
