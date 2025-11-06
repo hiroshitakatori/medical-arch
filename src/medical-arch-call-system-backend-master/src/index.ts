@@ -137,5 +137,15 @@ server.listen(config.get("PORT"), () => {
         config.get("DB_CONN_STRING"),
         () => console.log('connected to mongodb.')
     );
-    redisClient.on('error', (err: any) => console.log('Redis Client Error', err));
+    // Redis error handling (suppress errors in development/test if Redis is not available)
+    redisClient.on('error', (err: any) => {
+        if (process.env.NODE_ENV === 'production') {
+            console.log('Redis Client Error', err);
+        }
+        // Silently ignore Redis errors in development/test environments
+    });
+}).on('error', (err: any) => {
+    console.error('[ERROR] Server listen error:', err);
+    console.error('[ERROR] Error code:', err?.code);
+    console.error('[ERROR] Error message:', err?.message);
 });

@@ -2654,7 +2654,7 @@ const callWelcome = async (req: Request, res: Response) => {
 
         // our logic goes here
         let isAvailable :any= await getAvailableStaff3();
-        let day = moment(new Date()).format('YYYY-MM-DD');
+        let day = moment(new Date()).utcOffset(9).format('YYYY-MM-DD');
         day = day.toString();
         // console.log("day", day)
         console.log("isAvailable", isAvailable?.name)
@@ -2792,19 +2792,16 @@ async function getAvailableStaff2() {
 }
 async function getAvailableStaff3() {
     try {
-
-        let startDate = new Date();
-        // console.log(startDate)
-        let day = moment(new Date()).format('YYYY-MM-DD');
+        // 現在時刻（UTC基準の瞬間）とJSTのカレンダー日
+        const now = new Date();
+        let day = moment(now).utcOffset(9).format('YYYY-MM-DD');
         day = day.toString();
-        // console.log("day", day)
 
-        let filter: any = {
-            // name: { $ne: null },
-            startDay:day,
-            startDate: {$lte: startDate},
-            endDate: {$gte: startDate}
-
+        // JSTの当日レコードに限定しつつ、時間帯一致（深夜またぎ対応）で絞り込む
+        const matchBase: any = {
+            startDay: day,
+            status: 1,
+            onShift: 1
         };
         // let filter2 ={...filter,isResponder:1} 
         // // console.log(filter2)
@@ -2857,7 +2854,24 @@ async function getAvailableStaff3() {
 
         
         let StaffList = await StaffShift.aggregate([
-            {$match: filter},
+            { $match: matchBase },
+            {
+                $addFields: {
+                    currentTime: now
+                }
+            },
+            {
+                $match: {
+                    $expr: {
+                        $cond: [
+                            { $gte: ["$endDate", "$startDate"] }, // Normal shift (end >= start)
+                            { $and: [ { $lte: ["$startDate", "$currentTime"] }, { $gte: ["$endDate", "$currentTime"] } ] },
+                            // Overnight shift (end < start)
+                            { $or:  [ { $lte: ["$startDate", "$currentTime"] }, { $gte: ["$endDate", "$currentTime"] } ] }
+                        ]
+                    }
+                }
+            },
             {
                 $lookup: {
                     from: 'users',
@@ -3108,7 +3122,7 @@ const checkCallForward = async (req: Request, res: Response) => {
 
         // our logic goes here
         let isAvailable :any= await getAvailableStaff3();
-        let day = moment(new Date()).format('YYYY-MM-DD');
+        let day = moment(new Date()).utcOffset(9).format('YYYY-MM-DD');
         day = day.toString();
         // console.log("day", day)
         console.log("isAvailable", isAvailable?.name)
